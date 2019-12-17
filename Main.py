@@ -21,18 +21,18 @@ def start():
     begin = input('Would you like to begin? (Yes or No)')
     if begin == 'Yes' or begin == "yes":
         print('Here is your list of topics to choose from:')
-        time.sleep(2)
+        time.sleep(1)
         print('.')
-        time.sleep(2)
+        time.sleep(1)
         print('.')
-        time.sleep(2)
+        time.sleep(1)
         print('////////////////')
         print('1 = Getting Started (Hello World!)')
         print('2 = Math Operators')
         print('3 = Variables')
         print('4 = If/Else')
         print('////////////////')
-        time.sleep(3)
+        time.sleep(1)
         choose = input('Which topic would you like to learn about? (Type the number of a topic)')
         if choose == "1":
             print('Good choice! Always start at the basics.')
@@ -73,6 +73,23 @@ def start():
                     tryworld()
             tryworld()
         if choose == "2":
+            def printmultiply():
+                mult = input()
+                if mult == 'print(21 / 3)':
+                    print("Awesome!")
+                    time.sleep(1)
+                    print('You have completed the Math Operators section of the course!')
+                    time.sleep(1)
+                    print('You will now return to the selection page!')
+                    time.sleep(2)
+                    start()
+                else:
+                    print('Sorry, this is incorrect. Remember, when using integers in print statements,')
+                    time.sleep(0.5)
+                    print('there is no need to quotes.')
+                    time.sleep(1)
+                    printmultiply()
+
             print('Welcome! This is the Math Operators section.')
             time.sleep(3)
             print('There are several math operators built right into python.')
@@ -88,7 +105,7 @@ def start():
             print("For example,")
             print("Typing 'print(2 + 2)' will yield:")
             time.sleep(2)
-            print('4')
+            print('4.0')
             time.sleep(3)
             print('You can also just type the operator right into the python console!')
             time.sleep(2)
@@ -101,8 +118,11 @@ def start():
                 if answer == ('print(21 / 3)') or answer == '21 / 3':
                     print("Correct!")
                     time.sleep(2)
-                    print('You have completed the Math Operators section of the course!')
-                    start()
+                    print('Remember, you can also output math operations using the "print" function')
+                    time.sleep(2)
+                    print('Try getting the same answer using the print statement:')
+                    printmultiply()
+
                 else:
                     print('Sorry, this is incorrect. Try again!')
                     trymultiply()
@@ -167,7 +187,7 @@ def start():
             time.sleep(0.5)
             print('on that input!')
             time.sleep(2)
-            print("For example: You ask (with a print statement) 'print('What is 2 + 2' ")
+            print("For example: You ask (with a print statement) 'print('What is 2 + 2)' ")
             time.sleep(2)
             print('Use your knowledge of variables to assign this input to a "testvar" variable:')
             time.sleep(1)
@@ -211,8 +231,7 @@ def start():
                     print('Incorrect. Try again!')
                     iftest()
             iftest()
-                         
-start()
 
+start()
 
 
