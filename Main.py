@@ -199,13 +199,14 @@ def start():
             time.sleep(2)
             print()
             print()
+            time.sleep(1)
             print('''
                   'if testvar == "4":
                         print('Correct!')
                   else:
                         print('Wrong')
-        
                         ''')
+            time.sleep(1)
             print()
             print()
             time.sleep(2)
